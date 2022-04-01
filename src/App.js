@@ -1,22 +1,27 @@
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { increment } from './redux/counter';
 import logo from './logo.svg';
 import './App.css';
+
+function Counter() {
+  const { count } = useSelector((state) => state.counter);
+  const dispatch = useDispatch();
+    
+    return (
+        <div>
+            <p>You clicked {count} times!</p>
+            <button onClick={() => dispatch(increment())}>Click!</button>
+        </div>
+    );
+}
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Counter />
       </header>
     </div>
   );

@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
-import counterReducer from './counter';
+import configOptionsReducer from './availableConfigOptions';
 export default configureStore({
     reducer: {
-        counter: counterReducer
+        availableConfigOptions: configOptionsReducer
     }
 });

@@ -1,21 +1,18 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { increment } from './redux/counter';
+//import { increment } from './redux/availableConfigOptions';
 import logo from './logo.svg';
 import './App.css';
 
 function Counter() {
-  const { count } = useSelector((state) => state.counter);
+  const { engine, paint } = useSelector((state) => state.availableConfigOptions);
   const dispatch = useDispatch();
-    
     return (
         <div>
-            <p>You clicked {count} times!</p>
-            <button onClick={() => dispatch(increment())}>Click!</button>
+        <p>Your car engine model is: {engine[0].model} and paint color: {paint[0].name}! That costs you: {parseInt(engine[0].price) + parseInt(paint[0].price)} PLN in total.</p>
         </div>
     );
-}
-
+  }
 
 function App() {
   return (

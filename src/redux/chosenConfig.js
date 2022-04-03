@@ -5,15 +5,14 @@ export const configOptionsSlice = createSlice({
     initialState: {
         activePage: 0,
         lastPage:6,
-        selectedConfig:[]
-        //{
-            //engine: {},
-            //paint: {},
-            //rims: {},
-            //seatType: {},
-            //interiorColor: {},
-            //additionalEquipment:[]
-        //}
+        selectedConfig:{
+            engine: {},
+            paint: {},
+            rims: {},
+            seatType: {},
+            interiorColor: {},
+            additionalEquipment:[]
+        }
   },
   reducers: {
       nextPage: (state) => {
@@ -27,12 +26,11 @@ export const configOptionsSlice = createSlice({
           }
       },
       setConfig:(state,action) =>{
-          const elemIndex = state.selectedConfig.map((e)=>e[0]).indexOf(action.payload[Object.keys(action.payload)[0]]);
-          if (elemIndex === -1) {
-              state.selectedConfig.push(action.payload);
+          if (action.payload.targetKey === 'additionalEquipment') {
+              
           }
           else {
-              state.selectedConfig[elemIndex] = action.payload;
+              state.selectedConfig[action.payload.targetKey] = action.payload.v;
           }
       }
   }

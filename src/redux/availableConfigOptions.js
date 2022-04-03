@@ -5,7 +5,11 @@ export const configOptionsSlice = createSlice({
   initialState: {
     headers: {
       engine: ["Model", "Fuel type", "Displacement", "Power", "Engine code", "Price"],
-      paint:["Paint color","Color code","Price"],
+      paint: ["Paint color", "Color code", "Price"],
+      rims: ["Size", "Name", "Price"],
+      seatType: ["Option","Material","Heated","Ventilated","Regulation planes","Price"],
+      interiorColor: ["Name", "Color code", "Price"],
+      additionalEquipment:["Name","Price"]
     },
     engine: [{
       "model": "b20m23i",

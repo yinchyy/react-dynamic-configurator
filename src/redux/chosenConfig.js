@@ -6,6 +6,14 @@ export const configOptionsSlice = createSlice({
         activePage: 0,
         lastPage:6,
         selectedConfig:[]
+        //{
+            //engine: {},
+            //paint: {},
+            //rims: {},
+            //seatType: {},
+            //interiorColor: {},
+            //additionalEquipment:[]
+        //}
   },
   reducers: {
       nextPage: (state) => {
@@ -19,7 +27,7 @@ export const configOptionsSlice = createSlice({
           }
       },
       setConfig:(state,action) =>{
-          const elemIndex = state.selectedConfig.indexOf();
+          const elemIndex = state.selectedConfig.map((e)=>e[0]).indexOf(action.payload[Object.keys(action.payload)[0]]);
           if (elemIndex === -1) {
               state.selectedConfig.push(action.payload);
           }

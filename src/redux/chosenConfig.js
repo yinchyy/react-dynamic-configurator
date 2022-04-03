@@ -4,7 +4,7 @@ export const configOptionsSlice = createSlice({
   name: "chosenConfig",
     initialState: {
         activePage: 0,
-        lastPage:5,
+        lastPage:6,
         selectedConfig:[]
   },
   reducers: {

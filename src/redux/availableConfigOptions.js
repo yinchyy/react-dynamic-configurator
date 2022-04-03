@@ -3,6 +3,10 @@ import { createSlice } from "@reduxjs/toolkit";
 export const configOptionsSlice = createSlice({
   name: "availableConfigOptions",
   initialState: {
+    headers: {
+      engine: ["Model", "Fuel type", "Displacement", "Power", "Engine code", "Price"],
+      paint:["Paint color","Color code","Price"],
+    },
     engine: [{
       "model": "b20m23i",
       "fuel": "gasoline",

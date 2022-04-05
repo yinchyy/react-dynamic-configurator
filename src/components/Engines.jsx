@@ -10,6 +10,7 @@ import { setEngine } from '../redux/chosenConfig';
 
 function Engines() {
   const { headers, engine } = useSelector((state) => state.engine);
+  const { engineID } = useSelector((state) => state.chosenConfig);
   const dispatch = useDispatch();
   return (
     <Container>
@@ -21,7 +22,7 @@ function Engines() {
       {engine.map((value) => (
         <Row className="row-cols-7 d-flex flex-row">
           <Col className="d-flex justify-content-end">
-            <input type="radio" name="element" onChange={() => { dispatch(setEngine(value.id)); }} />
+            <input type="radio" name="element" onChange={() => { dispatch(setEngine(value.id)); }} checked={value.id === engineID} />
           </Col>
           <Col>{value.model}</Col>
           <Col>{value.fuel}</Col>

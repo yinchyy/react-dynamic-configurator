@@ -48,7 +48,7 @@ export const configOptionsSlice = createSlice({
 
 // Action creators are generated for each case reducer function
 export const {
-  nextPage, previousPage, setEngine, setPaint, setRimsColor,
+  nextPage, previousPage, setEngine, setPaint, setRimsColor, setRims, setSeatType, setInteriorColor,
 } = configOptionsSlice.actions;
 
 export default configOptionsSlice.reducer;

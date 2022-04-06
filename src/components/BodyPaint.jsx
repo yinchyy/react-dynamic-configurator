@@ -14,7 +14,7 @@ function BodyPaint() {
   const dispatch = useDispatch();
   return (
     <Container>
-      <header className="text-center"><h1>Engine selection</h1></header>
+      <header className="text-center"><h1>Body paint selection</h1></header>
       <Row class="row-cols-4 d-flex flex-row">
         <Col />
         {headers.map((value) => <Col>{value}</Col>)}

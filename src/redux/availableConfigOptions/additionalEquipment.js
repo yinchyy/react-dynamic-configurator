@@ -5,14 +5,17 @@ export const configOptionsSlice = createSlice({
   initialState: {
     headers: ['Name', 'Price'],
     additionalEquipment: [{
+      id: 0,
       name: 'dynamic LED lights',
       price: 2320,
     },
     {
+      id: 1,
       name: 'premium soundsystem',
       price: 2198,
     },
     {
+      id: 2,
       name: 'sport suspension',
       price: 5350,
     }],

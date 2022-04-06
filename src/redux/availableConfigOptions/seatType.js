@@ -5,6 +5,7 @@ export const configOptionsSlice = createSlice({
   initialState: {
     headers: ['Option', 'Material', 'Heated', 'Ventilated', 'Regulation planes', 'Price'],
     seatType: [{
+      id: 0,
       name: 'standard',
       material: 'textile',
       isHeated: false,
@@ -13,6 +14,7 @@ export const configOptionsSlice = createSlice({
       price: 900,
     },
     {
+      id: 1,
       name: 'comfort',
       material: 'polyester',
       isHeated: true,
@@ -21,6 +23,7 @@ export const configOptionsSlice = createSlice({
       price: 2400,
     },
     {
+      id: 2,
       name: 'premium',
       material: 'leather',
       isHeated: true,
@@ -29,6 +32,7 @@ export const configOptionsSlice = createSlice({
       price: 5200,
     },
     {
+      id: 3,
       name: 'sport',
       material: 'alcantara',
       isHeated: true,

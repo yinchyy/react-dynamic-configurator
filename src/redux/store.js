@@ -4,6 +4,8 @@ import paintReducer from './availableConfigOptions/paint';
 import rimsReducer from './availableConfigOptions/rims';
 import seatTypeReducer from './availableConfigOptions/seatType';
 import interiorColorReducer from './availableConfigOptions/interiorColor';
+import additionalEquipmentReducer from './availableConfigOptions/additionalEquipment';
+import checkboxStatesReducer from './checkboxStates';
 import chosenConfigReducer from './chosenConfig';
 
 export default configureStore({
@@ -13,6 +15,8 @@ export default configureStore({
     rims: rimsReducer,
     seatType: seatTypeReducer,
     interiorColor: interiorColorReducer,
+    additionalEquipment: additionalEquipmentReducer,
+    checkboxStates: checkboxStatesReducer,
     chosenConfig: chosenConfigReducer,
   },
 });

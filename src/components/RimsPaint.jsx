@@ -25,7 +25,9 @@ function RimsPaint() {
             <input type="radio" name="element" onChange={() => { dispatch(setRimsColor(value.id)); }} checked={value.id === rimsColorID} />
           </Col>
           <Col>{value.name}</Col>
-          <Col>{value.colorCode}</Col>
+          <Col style={{ color: value.colorCode }}>
+            {value.colorCode}
+          </Col>
           <Col>{value.price}</Col>
         </Row>
       ))}

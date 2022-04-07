@@ -7,6 +7,7 @@ import RimsPaint from './components/RimsPaint';
 import Rims from './components/Rims';
 import SeatType from './components/SeatType';
 import InteriorColor from './components/InteriorColor';
+import AdditionalEquipment from './components/AdditionalEquipment';
 import Navigation from './components/Navigation';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       {activePage === 3 && <Rims />}
       {activePage === 4 && <SeatType />}
       {activePage === 5 && <InteriorColor />}
+      {activePage === 6 && <AdditionalEquipment />}
       <Navigation />
     </div>
   );

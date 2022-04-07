@@ -5,6 +5,7 @@ import Engine from './components/Engines';
 import BodyPaint from './components/BodyPaint';
 import RimsPaint from './components/RimsPaint';
 import Rims from './components/Rims';
+import SeatType from './components/SeatType';
 import Navigation from './components/Navigation';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       {activePage === 1 && <BodyPaint />}
       {activePage === 2 && <RimsPaint />}
       {activePage === 3 && <Rims />}
+      {activePage === 4 && <SeatType />}
       <Navigation />
     </div>
   );

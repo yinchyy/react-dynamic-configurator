@@ -13,6 +13,7 @@ function Summary() {
   const { seatType } = useSelector((state) => state.seatType);
   const { interiorColor } = useSelector((state) => state.interiorColor);
   const { rims } = useSelector((state) => state.rims);
+  const { additionalEquipment } = useSelector((state) => state.additionalEquipment);
   const {
     engineID,
     paintID,
@@ -23,7 +24,14 @@ function Summary() {
   } = useSelector((state) => state.chosenConfig);
   const baseCost = 40000;
   let sum = baseCost;
-  const config = new Array(6);
+  const config = new Array(7);
+  const { checkboxStates } = useSelector((state) => state.checkboxStates);
+  const additionalEquipmentIDs = [];
+  for (const index in checkboxStates) {
+    if (checkboxStates[index]) {
+      additionalEquipmentIDs.push(parseInt(index, 10));
+    }
+  }
 
   config[0] = { ...engine.find((item) => item.id === engineID) };
   config[1] = { ...paint.find((item) => item.id === paintID) };
@@ -31,10 +39,18 @@ function Summary() {
   config[3] = { ...rims.find((item) => item.id === rimsID) };
   config[4] = { ...seatType.find((item) => item.id === seatTypeID) };
   config[5] = { ...interiorColor.find((item) => item.id === interiorColorID) };
+  config[6] = [];
 
-  for (const obj of config) {
-    sum += obj.price;
+  for (let i = 0; i < 6; i += 1) {
+    sum += config[i].price;
   }
+  for (const eqID of additionalEquipmentIDs) {
+    config[6].push({ ...additionalEquipment.find((item) => item.id === eqID) });
+  }
+  for (const value of config[6]) {
+    sum += value.price;
+  }
+
   return (
     <Container>
       <header className="text-center"><h1>Summary</h1></header>
@@ -93,6 +109,19 @@ function Summary() {
         </Col>
         <Col>{config[5].price}</Col>
       </Row>
+      <Row className="row-cols-2 d-flex flex-row justify-content-center">
+        <Col>
+          Additional equipment:
+        </Col>
+        <Col />
+      </Row>
+      {config[6].map((value) => (
+        <Row className="row-cols-2 d-flex flex-row justify-content-center">
+          <Col className="text-center">{value.name}</Col>
+          <Col>{value.price}</Col>
+        </Row>
+      ))}
+
       <Row className="row-cols-2 d-flex flex-row justify-content-center">
         <Col className="text-end">
           Sum:

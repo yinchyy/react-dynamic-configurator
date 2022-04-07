@@ -8,10 +8,11 @@ import Rims from './components/Rims';
 import SeatType from './components/SeatType';
 import InteriorColor from './components/InteriorColor';
 import AdditionalEquipment from './components/AdditionalEquipment';
+import Summary from './components/Summary';
 import Navigation from './components/Navigation';
 
 function App() {
-  const { activePage } = useSelector((state) => state.chosenConfig);
+  const { activePage, lastPage } = useSelector((state) => state.chosenConfig);
   return (
     <div className="App">
       {activePage === 0 && <Engine />}
@@ -21,6 +22,7 @@ function App() {
       {activePage === 4 && <SeatType />}
       {activePage === 5 && <InteriorColor />}
       {activePage === 6 && <AdditionalEquipment />}
+      {activePage === lastPage && <Summary />}
       <Navigation />
     </div>
   );

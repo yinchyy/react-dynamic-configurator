@@ -15,7 +15,7 @@ function RimsPaint() {
   return (
     <Container>
       <header className="text-center"><h1>Rims paint selection</h1></header>
-      <Row class="row-cols-4 d-flex flex-row">
+      <Row className="row-cols-4 d-flex flex-row">
         <Col />
         {headers.map((value) => <Col>{value}</Col>)}
       </Row>

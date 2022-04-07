@@ -15,7 +15,7 @@ function Engines() {
   return (
     <Container>
       <header className="text-center"><h1>Engine selection</h1></header>
-      <Row class="row-cols-7 d-flex flex-row">
+      <Row className="row-cols-7 d-flex flex-row">
         <Col />
         {headers.map((value) => <Col>{value}</Col>)}
       </Row>

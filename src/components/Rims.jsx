@@ -15,7 +15,7 @@ function Rims() {
   return (
     <Container>
       <header className="text-center"><h1>Rims selection</h1></header>
-      <Row class="row-cols-4 d-flex flex-row">
+      <Row className="row-cols-4 d-flex flex-row">
         <Col />
         {headers.map((value) => <Col>{value}</Col>)}
       </Row>
@@ -24,8 +24,8 @@ function Rims() {
           <Col className="d-flex justify-content-end">
             <input type="radio" name="element" onChange={() => { dispatch(setRims(value.id)); }} checked={value.id === rimsID} />
           </Col>
-          <Col>{value.name}</Col>
           <Col>{value.size}</Col>
+          <Col>{value.name}</Col>
           <Col>{value.price}</Col>
         </Row>
       ))}

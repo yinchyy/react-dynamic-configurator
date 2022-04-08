@@ -6,7 +6,6 @@ import {
   Row,
   Col,
 } from 'reactstrap';
-import PropTypes from 'prop-types';
 import { setCheckboxStates } from '../redux/checkboxStates';
 
 function AdditionalEquipment() {
@@ -26,9 +25,6 @@ function AdditionalEquipment() {
     });
     dispatch(setCheckboxStates(updatedCheckboxStates));
   }
-  handleCheckboxStateChange.propTypes = {
-    id: PropTypes.number.isRequired,
-  };
 
   return (
     <Container>

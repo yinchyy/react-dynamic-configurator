@@ -17,5 +17,7 @@ npm install
 npm start
 ```
 Browser will start automatically shortly after executing start command.
-#License
+
+# License
+
 [MIT License](LICENSE)

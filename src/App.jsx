@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useSelector } from 'react-redux';
-import Engine from './components/Engines';
+import Engine from './components/Engines/Engines';
 import BodyPaint from './components/BodyPaint';
 import RimsPaint from './components/RimsPaint';
 import Rims from './components/Rims';

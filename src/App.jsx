@@ -4,10 +4,10 @@ import { useSelector } from 'react-redux';
 import Engine from './components/Engines/Engines';
 import BodyPaint from './components/Paintjobs/BodyPaint/BodyPaint';
 import RimsPaint from './components/Paintjobs/RimsPaint/RimsPaint';
-import Rims from './components/Rims';
-import SeatType from './components/SeatType';
-import InteriorColor from './components/InteriorColor';
-import AdditionalEquipment from './components/AdditionalEquipment';
+import Rims from './components/Rims/Rims';
+import SeatType from './components/Interior/SeatType/SeatType';
+import InteriorColor from './components/Interior/InteriorColor/InteriorColor';
+import AdditionalEquipment from './components/AdditionalEquipment/AdditionalEquipment';
 import Summary from './components/Summary';
 import Navigation from './components/Navigation';
 

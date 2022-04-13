@@ -7,7 +7,7 @@ import {
   Col,
 } from 'reactstrap';
 import PropTypes from 'prop-types';
-import { setSeatType } from '../redux/chosenConfig';
+import { setSeatType } from '../../../redux/chosenConfig';
 
 function SeatType() {
   const { headers, seatType } = useSelector((state) => state.seatType);

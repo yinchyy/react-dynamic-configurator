@@ -6,7 +6,7 @@ import {
   Row,
   Col,
 } from 'reactstrap';
-import { setCheckboxStates } from '../redux/checkboxStates';
+import { setCheckboxStates } from '../../redux/checkboxStates';
 
 function AdditionalEquipment() {
   const { headers, additionalEquipment } = useSelector((state) => state.additionalEquipment);

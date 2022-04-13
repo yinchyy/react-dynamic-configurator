@@ -6,7 +6,7 @@ import {
   Row,
   Col,
 } from 'reactstrap';
-import { setRims } from '../redux/chosenConfig';
+import { setRims } from '../../redux/chosenConfig';
 
 function Rims() {
   const { headers, rims } = useSelector((state) => state.rims);

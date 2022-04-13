@@ -6,7 +6,7 @@ import {
   Row,
   Col,
 } from 'reactstrap';
-import { setInteriorColor } from '../redux/chosenConfig';
+import { setInteriorColor } from '../../../redux/chosenConfig';
 
 function InteriorColor() {
   const { headers, interiorColor } = useSelector((state) => state.interiorColor);

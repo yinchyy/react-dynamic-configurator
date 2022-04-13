@@ -7,6 +7,7 @@ import {
   Col,
 } from 'reactstrap';
 import { setInteriorColor } from '../../../redux/chosenConfig';
+import InteriorColors from '../../Paintjobs/Paint';
 
 function Primary() {
   const { headers, interiorColor } = useSelector((state) => state.interiorColor);
@@ -20,16 +21,13 @@ function Primary() {
         {headers.map((value) => <Col>{value}</Col>)}
       </Row>
       {interiorColor.map((value) => (
-        <Row className="row-cols-4 d-flex flex-row">
-          <Col className="d-flex justify-content-end">
-            <input type="radio" name="element" onChange={() => { dispatch(setInteriorColor(value.id)); }} checked={value.id === interiorColorID} />
-          </Col>
-          <Col>{value.name}</Col>
-          <Col style={{ color: value.colorCode }}>
-            {value.colorCode}
-          </Col>
-          <Col>{value.price}</Col>
-        </Row>
+        <InteriorColors
+          name={value.name}
+          colorCode={value.colorCode}
+          price={value.price}
+          isChecked={value.id === interiorColorID}
+          change={() => { dispatch(setInteriorColor(value.id)); }}
+        />
       ))}
     </Container>
   );

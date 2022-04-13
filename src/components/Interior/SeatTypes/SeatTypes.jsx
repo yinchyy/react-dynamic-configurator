@@ -8,8 +8,9 @@ import {
 } from 'reactstrap';
 import PropTypes from 'prop-types';
 import { setSeatType } from '../../../redux/chosenConfig';
+import SeatType from './SeatType';
 
-function SeatType() {
+function SeatTypes() {
   const { headers, seatType } = useSelector((state) => state.seatType);
   const { seatTypeID } = useSelector((state) => state.chosenConfig);
   const dispatch = useDispatch();
@@ -32,20 +33,19 @@ function SeatType() {
         {headers.map((value) => <Col>{value}</Col>)}
       </Row>
       {seatType.map((value) => (
-        <Row className="row-cols-7 d-flex flex-row">
-          <Col className="d-flex justify-content-end">
-            <input type="radio" name="element" onChange={() => { dispatch(setSeatType(value.id)); }} checked={value.id === seatTypeID} />
-          </Col>
-          <Col>{value.name}</Col>
-          <Col>{value.material}</Col>
-          <Col>{booleanToString(value.isHeated)}</Col>
-          <Col>{booleanToString(value.isVentilated)}</Col>
-          <Col>{value.regulationWays}</Col>
-          <Col>{value.price}</Col>
-        </Row>
+        <SeatType
+          name={value.name}
+          material={value.material}
+          heated={booleanToString(value.isHeated)}
+          ventilated={booleanToString(value.isVentilated)}
+          regulationWays={value.regulationWays}
+          price={value.price}
+          isChecked={value.id === seatTypeID}
+          change={() => { dispatch(setSeatType(value.id)); }}
+        />
       ))}
     </Container>
   );
 }
 
-export default SeatType;
+export default SeatTypes;

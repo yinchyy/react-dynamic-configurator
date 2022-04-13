@@ -7,6 +7,7 @@ import {
   Col,
 } from 'reactstrap';
 import { setCheckboxStates } from '../../redux/checkboxStates';
+import EqElement from './EqElement';
 
 function AdditionalEquipment() {
   const { headers, additionalEquipment } = useSelector((state) => state.additionalEquipment);
@@ -34,13 +35,12 @@ function AdditionalEquipment() {
         {headers.map((value) => <Col>{value}</Col>)}
       </Row>
       {additionalEquipment.map((value) => (
-        <Row className="row-cols-3 d-flex flex-row">
-          <Col className="d-flex justify-content-end">
-            <input type="checkbox" name="element" onChange={() => { handleCheckboxStateChange(value.id); }} checked={checkboxStates[value.id]} />
-          </Col>
-          <Col>{value.name}</Col>
-          <Col>{value.price}</Col>
-        </Row>
+        <EqElement
+          name={value.name}
+          price={value.price}
+          isChecked={checkboxStates[value.id]}
+          change={() => { handleCheckboxStateChange(value.id); }}
+        />
       ))}
     </Container>
   );

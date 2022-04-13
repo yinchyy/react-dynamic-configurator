@@ -124,7 +124,7 @@ function Summary() {
 
       <Row className="row-cols-2 d-flex flex-row justify-content-center">
         <Col className="text-end">
-          Sum:
+          Total:
         </Col>
         <Col>{sum}</Col>
       </Row>

@@ -5,7 +5,7 @@ import Engine from './components/Engines/Engines';
 import BodyPaint from './components/Paintjobs/BodyPaint/BodyPaint';
 import RimsPaint from './components/Paintjobs/RimsPaint/RimsPaint';
 import Rims from './components/Rims/Rims';
-import SeatType from './components/Interior/SeatType/SeatType';
+import SeatType from './components/Interior/SeatType/SeatTypes';
 import InteriorColor from './components/Interior/InteriorColors/Primary';
 import AdditionalEquipment from './components/AdditionalEquipment/AdditionalEquipment';
 import Summary from './components/Summary';

@@ -7,6 +7,7 @@ import {
   Col,
 } from 'reactstrap';
 import { setRims } from '../../redux/chosenConfig';
+import Rim from './Rim';
 
 function Rims() {
   const { headers, rims } = useSelector((state) => state.rims);
@@ -20,14 +21,13 @@ function Rims() {
         {headers.map((value) => <Col>{value}</Col>)}
       </Row>
       {rims.map((value) => (
-        <Row className="row-cols-4 d-flex flex-row">
-          <Col className="d-flex justify-content-end">
-            <input type="radio" name="element" onChange={() => { dispatch(setRims(value.id)); }} checked={value.id === rimsID} />
-          </Col>
-          <Col>{value.size}</Col>
-          <Col>{value.name}</Col>
-          <Col>{value.price}</Col>
-        </Row>
+        <Rim
+          size={value.size}
+          name={value.name}
+          price={value.price}
+          isChecked={value.id === rimsID}
+          change={() => { dispatch(setRims(value.id)); }}
+        />
       ))}
     </Container>
   );

@@ -5,11 +5,8 @@ import {
   Col,
 } from 'reactstrap';
 import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
-import { setEngine } from '../../redux/chosenConfig';
 
 function Engine({
-  id,
   model,
   fuel,
   displacement,
@@ -17,12 +14,12 @@ function Engine({
   engineCode,
   price,
   isChecked,
+  change,
 }) {
-  const dispatch = useDispatch();
   return (
     <Row className="row-cols-7 d-flex flex-row">
       <Col className="d-flex justify-content-end">
-        <input type="radio" name="element" onChange={() => { dispatch(setEngine(id)); }} checked={isChecked} />
+        <input type="radio" name="element" checked={isChecked} onChange={change} />
       </Col>
       <Col>{model}</Col>
       <Col>{fuel}</Col>
@@ -34,7 +31,6 @@ function Engine({
   );
 }
 Engine.propTypes = {
-  id: PropTypes.number.isRequired,
   model: PropTypes.string.isRequired,
   fuel: PropTypes.string.isRequired,
   displacement: PropTypes.string.isRequired,
@@ -42,5 +38,6 @@ Engine.propTypes = {
   engineCode: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   isChecked: PropTypes.bool.isRequired,
+  change: PropTypes.func.isRequired,
 };
 export default Engine;

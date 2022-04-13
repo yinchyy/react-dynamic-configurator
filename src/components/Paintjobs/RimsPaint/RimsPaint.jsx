@@ -6,7 +6,8 @@ import {
   Row,
   Col,
 } from 'reactstrap';
-import { setRimsColor } from '../redux/chosenConfig';
+import { setRimsColor } from '../../../redux/chosenConfig';
+import Paint from '../Paint';
 
 function RimsPaint() {
   const { headers, paint } = useSelector((state) => state.paint);
@@ -20,16 +21,14 @@ function RimsPaint() {
         {headers.map((value) => <Col>{value}</Col>)}
       </Row>
       {paint.map((value) => (
-        <Row className="row-cols-4 d-flex flex-row">
-          <Col className="d-flex justify-content-end">
-            <input type="radio" name="element" onChange={() => { dispatch(setRimsColor(value.id)); }} checked={value.id === rimsColorID} />
-          </Col>
-          <Col>{value.name}</Col>
-          <Col style={{ color: value.colorCode }}>
-            {value.colorCode}
-          </Col>
-          <Col>{value.price}</Col>
-        </Row>
+        <Paint
+          id={value.id}
+          name={value.name}
+          colorCode={value.colorCode}
+          price={value.price}
+          isChecked={value.id === rimsColorID}
+          change={() => { dispatch(setRimsColor(value.id)); }}
+        />
       ))}
     </Container>
   );

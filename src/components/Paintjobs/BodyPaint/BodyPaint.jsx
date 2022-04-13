@@ -6,7 +6,8 @@ import {
   Row,
   Col,
 } from 'reactstrap';
-import { setPaint } from '../redux/chosenConfig';
+import { setPaint } from '../../../redux/chosenConfig';
+import Paint from '../Paint';
 
 function BodyPaint() {
   const { headers, paint } = useSelector((state) => state.paint);
@@ -20,16 +21,14 @@ function BodyPaint() {
         {headers.map((value) => <Col>{value}</Col>)}
       </Row>
       {paint.map((value) => (
-        <Row className="row-cols-4 d-flex flex-row">
-          <Col className="d-flex justify-content-end">
-            <input type="radio" name="element" onChange={() => { dispatch(setPaint(value.id)); }} checked={value.id === paintID} />
-          </Col>
-          <Col>{value.name}</Col>
-          <Col style={{ color: value.colorCode }}>
-            {value.colorCode}
-          </Col>
-          <Col>{value.price}</Col>
-        </Row>
+        <Paint
+          id={value.id}
+          name={value.name}
+          colorCode={value.colorCode}
+          price={value.price}
+          isChecked={value.id === paintID}
+          change={() => { dispatch(setPaint(value.id)); }}
+        />
       ))}
     </Container>
   );

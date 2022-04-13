@@ -8,7 +8,7 @@ import {
 } from 'reactstrap';
 import { setInteriorColor } from '../../../redux/chosenConfig';
 
-function InteriorColor() {
+function Primary() {
   const { headers, interiorColor } = useSelector((state) => state.interiorColor);
   const { interiorColorID } = useSelector((state) => state.chosenConfig);
   const dispatch = useDispatch();
@@ -35,4 +35,4 @@ function InteriorColor() {
   );
 }
 
-export default InteriorColor;
+export default Primary;

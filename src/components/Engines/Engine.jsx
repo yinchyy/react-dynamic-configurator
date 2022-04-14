@@ -7,6 +7,7 @@ import {
 import PropTypes from 'prop-types';
 
 function Engine({
+  id,
   model,
   fuel,
   displacement,
@@ -19,7 +20,7 @@ function Engine({
   return (
     <Row className="row-cols-7 d-flex flex-row">
       <Col className="d-flex justify-content-end">
-        <input type="radio" name="element" checked={isChecked} onChange={change} />
+        <input type="radio" data-testid={`item-${id}`} name="element" checked={isChecked} onChange={change} />
       </Col>
       <Col>{model}</Col>
       <Col>{fuel}</Col>
@@ -31,6 +32,7 @@ function Engine({
   );
 }
 Engine.propTypes = {
+  id: PropTypes.number.isRequired,
   model: PropTypes.string.isRequired,
   fuel: PropTypes.string.isRequired,
   displacement: PropTypes.string.isRequired,

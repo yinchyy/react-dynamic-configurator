@@ -22,6 +22,7 @@ function Engines() {
       </Row>
       {engine.map((value) => (
         <Engine
+          id={value.id}
           model={value.model}
           fuel={value.fuel}
           displacement={value.displacement}

@@ -1,6 +1,5 @@
 import React from 'react';
-import { screen, fireEvent, findByText } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { screen } from '@testing-library/react';
 import { render } from '../test-utils';
 import Engine from '../../components/Engines/Engine';
 

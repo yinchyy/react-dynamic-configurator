@@ -1,7 +1,9 @@
 import React from 'react';
 import { screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { render } from '../test-utils';
 import Engine from '../../components/Engines/Engine';
+import storage, { setEngine } from '../testStore';
 
 describe('Engine component', () => {
   test('element renders', () => {
@@ -26,5 +28,25 @@ describe('Engine component', () => {
     expect(screen.getByText('26kW')).toBeInTheDocument();
     expect(screen.getByText('TRB')).toBeInTheDocument();
     expect(screen.getByText('7896')).toBeInTheDocument();
+  });
+  test('value in store changes on radio change', () => {
+    const { engine } = storage.getState().engine;
+    render(engine.map((value) => (
+      <Engine
+        id={value.id}
+        model={value.model}
+        fuel={value.fuel}
+        displacement={value.displacement}
+        power={value.power}
+        engineCode={value.engine_code}
+        price={value.price}
+        isChecked={value.id === storage.getState().chosenConfig.engineID}
+        change={() => { storage.dispatch(setEngine(value.id)); }}
+      />
+    )));
+    expect(storage.getState().chosenConfig.engineID).toBe(0);
+    const radio1 = screen.getByTestId('item-1');
+    userEvent.click(radio1);
+    expect(storage.getState().chosenConfig.engineID).toBe(1);
   });
 });

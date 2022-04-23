@@ -23,6 +23,8 @@ const engines = createSlice({
       price: 6100,
     }],
   },
+  reducers: {
+  },
 }).reducer;
 const config = createSlice({
   name: 'chosenConfig',
@@ -30,12 +32,14 @@ const config = createSlice({
     engineID: 0,
   },
   reducers: {
+    setEngine: (state, action) => ({ ...state, engineID: action.payload }),
   },
-}).reducer;
+});
 
 export default configureStore({
   reducer: {
     engine: engines,
-    chosenConfig: config,
+    chosenConfig: config.reducer,
   },
 });
+export const { setEngine } = config.actions;

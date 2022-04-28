@@ -30,9 +30,34 @@ const config = createSlice({
   name: 'chosenConfig',
   initialState: {
     engineID: 0,
+    activePage: 0,
+    lastPage: 7,
   },
   reducers: {
     setEngine: (state, action) => ({ ...state, engineID: action.payload }),
+    nextPage: (state) => {
+      if (state.activePage < state.lastPage) {
+        return {
+          ...state,
+          activePage: state.activePage + 1,
+        };
+      }
+
+      return {
+        ...state,
+      };
+    },
+    previousPage: (state) => {
+      if (state.activePage > 0) {
+        return {
+          ...state,
+          activePage: state.activePage - 1,
+        };
+      }
+      return {
+        ...state,
+      };
+    },
   },
 });
 

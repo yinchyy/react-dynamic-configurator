@@ -22,13 +22,13 @@ function Navigation() {
   if (activePage === lastPage) {
     return (
       <Container className="d-flex justify-content-evenly">
-        <Button color="primary" onClick={() => { dispatch(returnToFirstPage()); }}>Configure again</Button>
+        <Button data-testid="returnToFirstPage" color="primary" onClick={() => { dispatch(returnToFirstPage()); }}>Configure again</Button>
       </Container>
     );
   }
   return (
     <Container className="d-flex justify-content-evenly">
-      <Button color={color} outline onClick={() => { dispatch(previousPage()); }}>&lt;</Button>
+      <Button data-testid="previousPage" color={color} outline onClick={() => { dispatch(previousPage()); }}>&lt;</Button>
       <p>
         {activePage + 1}
         {' '}
@@ -36,7 +36,7 @@ function Navigation() {
         {' '}
         {lastPage}
       </p>
-      <Button color="primary" outline onClick={() => { dispatch(nextPage()); }}>{btnValue}</Button>
+      <Button data-testid="nextPage" color="primary" outline onClick={() => { dispatch(nextPage()); }}>{btnValue}</Button>
     </Container>
   );
 }

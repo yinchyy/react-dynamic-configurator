@@ -58,6 +58,8 @@ const config = createSlice({
         ...state,
       };
     },
+    returnToFirstPage: (state) => ({ ...state, activePage: 0 }),
+    moveToLastPage: (state) => ({ ...state, activePage: state.lastPage }),
   },
 });
 
@@ -67,4 +69,10 @@ export default configureStore({
     chosenConfig: config.reducer,
   },
 });
-export const { setEngine } = config.actions;
+export const {
+  setEngine,
+  nextPage,
+  previousPage,
+  returnToFirstPage,
+  moveToLastPage,
+} = config.actions;

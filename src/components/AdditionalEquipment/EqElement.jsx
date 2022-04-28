@@ -7,6 +7,7 @@ import {
 import PropTypes from 'prop-types';
 
 function EqElement({
+  id,
   name,
   price,
   isChecked,
@@ -15,7 +16,7 @@ function EqElement({
   return (
     <Row className="row-cols-3 d-flex flex-row">
       <Col className="d-flex justify-content-end">
-        <input type="checkbox" name="element" onChange={change} checked={isChecked} />
+        <input data-testid={`checkbox-${id}`} type="checkbox" name="element" onChange={change} checked={isChecked} />
       </Col>
       <Col>{name}</Col>
       <Col>{price}</Col>
@@ -23,6 +24,7 @@ function EqElement({
   );
 }
 EqElement.propTypes = {
+  id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   isChecked: PropTypes.bool.isRequired,

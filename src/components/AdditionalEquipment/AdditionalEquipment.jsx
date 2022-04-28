@@ -36,6 +36,7 @@ function AdditionalEquipment() {
       </Row>
       {additionalEquipment.map((value) => (
         <EqElement
+          id={value.id}
           name={value.name}
           price={value.price}
           isChecked={checkboxStates[value.id]}

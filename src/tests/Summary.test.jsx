@@ -2,16 +2,16 @@ import React from 'react';
 import { screen } from '@testing-library/react';
 import { render } from './test-utils';
 import Summary from '../components/Summary';
-import store,
-{
+import store from './testStore';
+import {
   setEngine,
   setPaint,
   setRimsColor,
   setRims,
   setSeatType,
   setInteriorColor,
-  setCheckboxStates,
-} from './testStore';
+} from '../redux/chosenConfig';
+import { setCheckboxStates } from '../redux/checkboxStates';
 
 describe('Summary component', () => {
   test('it renders selected config', () => {

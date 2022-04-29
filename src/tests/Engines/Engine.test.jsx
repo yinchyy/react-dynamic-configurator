@@ -3,7 +3,8 @@ import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { render } from '../test-utils';
 import Engine from '../../components/Engines/Engine';
-import storage, { setEngine } from '../testStore';
+import storage from '../testStore';
+import { setEngine } from '../../redux/chosenConfig';
 
 describe('Engine component', () => {
   test('element renders', () => {

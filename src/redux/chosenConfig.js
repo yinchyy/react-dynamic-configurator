@@ -38,6 +38,7 @@ export const configOptionsSlice = createSlice({
       };
     },
     returnToFirstPage: (state) => ({ ...state, activePage: 0 }),
+    moveToLastPage: (state) => ({ ...state, activePage: state.lastPage }),
     setEngine: (state, action) => ({ ...state, engineID: action.payload }),
     setPaint: (state, action) => ({ ...state, paintID: action.payload }),
     setRims: (state, action) => ({ ...state, rimsID: action.payload }),
@@ -50,8 +51,17 @@ export const configOptionsSlice = createSlice({
 
 // Action creators are generated for each case reducer function
 export const {
-  nextPage, previousPage, returnToFirstPage, setEngine, setPaint, setRimsColor, setRims,
-  setSeatType, setInteriorColor, setAddEq,
+  nextPage,
+  previousPage,
+  returnToFirstPage,
+  moveToLastPage,
+  setEngine,
+  setPaint,
+  setRimsColor,
+  setRims,
+  setSeatType,
+  setInteriorColor,
+  setAddEq,
 } = configOptionsSlice.actions;
 
 export default configOptionsSlice.reducer;

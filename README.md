@@ -16,6 +16,10 @@ Install dependencies and start application:
 npm install
 npm start
 ```
+Running tests:
+```
+npm test
+```
 Browser will start automatically shortly after executing start command.
 
 # License

@@ -1,9 +1,9 @@
 import React from 'react';
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { render } from '../test-utils';
-import Engines from '../../components/Engines/Engines';
-import store from '../testStore';
+import { render } from '../../../utils/test-utils';
+import Engines from '../Engines';
+import store from '../../../redux/testStore';
 
 describe('Engine component', () => {
   test('first element checked by default', () => {

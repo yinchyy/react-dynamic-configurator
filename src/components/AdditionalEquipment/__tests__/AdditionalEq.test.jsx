@@ -1,9 +1,9 @@
 import React from 'react';
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { render } from './test-utils';
-import AdditionalEquipment from '../components/AdditionalEquipment/AdditionalEquipment';
-import store from './testStore';
+import AdditionalEquipment from '../AdditionalEquipment';
+import { render } from '../../../utils/test-utils';
+import store from '../../../redux/testStore';
 
 describe('AdditionalEquipment component', () => {
   test('checkbox click changes value in checkboxStates store', () => {

@@ -2,7 +2,7 @@ import React from 'react';
 import { render as rtlRender } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import PropTypes from 'prop-types';
-import store from './testStore';
+import store from '../redux/testStore';
 
 function render(
   ui,

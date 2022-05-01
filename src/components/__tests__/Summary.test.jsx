@@ -1,8 +1,8 @@
 import React from 'react';
 import { screen } from '@testing-library/react';
-import { render } from './test-utils';
-import Summary from '../components/Summary';
-import store from './testStore';
+import Summary from '../Summary';
+import { render } from '../../utils/test-utils';
+import store from '../../redux/testStore';
 import {
   setEngine,
   setPaint,
@@ -10,8 +10,8 @@ import {
   setRims,
   setSeatType,
   setInteriorColor,
-} from '../redux/chosenConfig';
-import { setCheckboxStates } from '../redux/checkboxStates';
+} from '../../redux/chosenConfig';
+import { setCheckboxStates } from '../../redux/checkboxStates';
 
 describe('Summary component', () => {
   test('it renders selected config', () => {

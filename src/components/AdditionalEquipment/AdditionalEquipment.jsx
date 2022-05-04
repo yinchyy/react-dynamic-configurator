@@ -17,7 +17,7 @@ function AdditionalEquipment() {
   if (checkboxStates.length === 0) {
     dispatch(setCheckboxStates(new Array(additionalEquipment.length).fill(false)));
   }
-  function handleCheckboxStateChange(id) {
+  const handleCheckboxStateChange = (id) => {
     const updatedCheckboxStates = checkboxStates.map((value, index) => {
       if (id === index) {
         return !value;
@@ -25,7 +25,7 @@ function AdditionalEquipment() {
       return value;
     });
     dispatch(setCheckboxStates(updatedCheckboxStates));
-  }
+  };
 
   return (
     <Container>

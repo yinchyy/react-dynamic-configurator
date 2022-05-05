@@ -1,12 +1,12 @@
 import React from 'react';
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { render } from '../../utils/test-utils';
-import store from '../../redux/testStore';
+import { render } from '../../../utils/test-utils';
+import store from '../../../redux/testStore';
 import Navigation from '../Navigation';
 import {
   moveToLastPage,
-} from '../../redux/chosenConfig';
+} from '../../../redux/chosenConfig';
 
 describe('Navigation component', () => {
   test('navigation renders navigation buttons', () => {

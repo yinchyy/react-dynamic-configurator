@@ -9,7 +9,7 @@ import SeatType from './components/Interior/SeatTypes/SeatTypes';
 import InteriorColor from './components/Interior/InteriorColors/Primary';
 import AdditionalEquipment from './components/AdditionalEquipment/AdditionalEquipment';
 import Summary from './components/Summary';
-import Navigation from './components/Navigation';
+import Navigation from './components/Navigation/Navigation';
 
 function App() {
   const { activePage, lastPage } = useSelector((state) => state.chosenConfig);

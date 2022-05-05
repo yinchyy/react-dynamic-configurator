@@ -17,18 +17,26 @@ function Engine({
   isChecked,
   change,
 }) {
+  let checked = '';
+  if (isChecked) {
+    checked = 'radio-checked';
+  }
   return (
-    <Row className="row-cols-7 d-flex flex-row">
-      <Col className="d-flex justify-content-end">
-        <input type="radio" data-testid={`item-${id}`} name="element" checked={isChecked} onChange={change} />
-      </Col>
-      <Col>{model}</Col>
+    <Col data-testid={`item-${id}`} className={`col-8 col-md-4 d-flex flex-column link-light radio-elem m-4 p-3 ${checked}`} onClick={change}>
+      <Col className="text-center fw-bold fs-5">{model}</Col>
       <Col>{fuel}</Col>
-      <Col>{displacement}</Col>
+      <Col>
+        {displacement}
+        <sup>3</sup>
+      </Col>
       <Col>{power}</Col>
       <Col>{engineCode}</Col>
-      <Col>{price}</Col>
-    </Row>
+      <Col className="link-danger">
+        {price}
+        {' '}
+        PLN
+      </Col>
+    </Col>
   );
 }
 Engine.propTypes = {

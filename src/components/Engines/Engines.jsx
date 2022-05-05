@@ -19,23 +19,21 @@ function Engines() {
         <h1>Engine selection</h1>
       </header>
       <Container>
-        <Row className="row-cols-7 d-flex flex-row">
-          <Col />
-          {headers.map((value) => <Col>{value}</Col>)}
+        <Row className="d-flex justify-content-center">
+          {engine.map((value) => (
+            <Engine
+              id={value.id}
+              model={value.model}
+              fuel={value.fuel}
+              displacement={value.displacement}
+              power={value.power}
+              engineCode={value.engine_code}
+              price={value.price}
+              isChecked={value.id === engineID}
+              change={() => { dispatch(setEngine(value.id)); }}
+            />
+          ))}
         </Row>
-        {engine.map((value) => (
-          <Engine
-            id={value.id}
-            model={value.model}
-            fuel={value.fuel}
-            displacement={value.displacement}
-            power={value.power}
-            engineCode={value.engine_code}
-            price={value.price}
-            isChecked={value.id === engineID}
-            change={() => { dispatch(setEngine(value.id)); }}
-          />
-        ))}
       </Container>
     </div>
   );

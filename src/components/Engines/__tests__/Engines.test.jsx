@@ -9,7 +9,7 @@ describe('Engine component', () => {
   test('first element checked by default', () => {
     render(<Engines />);
     const radio0 = screen.getByTestId('item-0');
-    expect(radio0).toBeChecked();
+    expect(radio0).toHaveClass('radio-checked');
     expect(screen.getByText('b20m23i')).toBeInTheDocument();
   });
   test('radio select works', async () => {

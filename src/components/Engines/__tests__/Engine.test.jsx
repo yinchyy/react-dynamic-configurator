@@ -28,7 +28,7 @@ describe('Engine component', () => {
     expect(screen.getByText('2136cm^3')).toBeInTheDocument();
     expect(screen.getByText('26kW')).toBeInTheDocument();
     expect(screen.getByText('TRB')).toBeInTheDocument();
-    expect(screen.getByText('7896')).toBeInTheDocument();
+    expect(screen.getByText('7896 PLN')).toBeInTheDocument();
   });
   test('value in store changes on radio change', () => {
     const { engine } = storage.getState().engine;

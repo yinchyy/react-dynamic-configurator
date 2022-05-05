@@ -1,0 +1,13 @@
+header{
+    min-height: 25vh;
+    width: 100%;
+    background-image: 
+        linear-gradient(
+          rgba(0, 0, 0, 0.5), 
+          rgba(0, 0, 0, 0.5)
+        ),
+        url(/public/engine.jpg);
+    background-position: 0% 70%;
+    background-size: cover;
+    color:#fff;
+}

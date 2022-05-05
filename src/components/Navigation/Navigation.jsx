@@ -17,21 +17,21 @@ function Navigation() {
   if (activePage === lastPage) {
     return (
       <Container className="d-flex justify-content-evenly">
-        <Button data-testid="returnToFirstPage" className="px-4" color="primary" onClick={() => { dispatch(returnToFirstPage()); }}>Configure again</Button>
+        <Button data-testid="returnToFirstPage" className="col-4 px-4" color="primary" onClick={() => { dispatch(returnToFirstPage()); }}>Configure again</Button>
       </Container>
     );
   }
   return (
-    <Container className="d-flex justify-content-evenly">
-      <Button data-testid="previousPage" color="primary" className={`px-4 ${className}`} onClick={() => { dispatch(previousPage()); }}>&lt;</Button>
-      <p className={className}>
+    <Container className="d-flex flex-wrap justify-content-between my-auto">
+      <Button data-testid="previousPage" color="primary" className={`col-12 col-md-4 py-3 py-md-0 px-4 ${className}`} onClick={() => { dispatch(previousPage()); }}>&lt; Previous&nbsp;step</Button>
+      <div className={`col-12 col-md-4 my-2 text-center align-middle ${className}`}>
         {activePage + 1}
         {' '}
         of
         {' '}
         {lastPage}
-      </p>
-      <Button data-testid="nextPage" className="px-4" color="primary" onClick={() => { dispatch(nextPage()); }}>{btnValue}</Button>
+      </div>
+      <Button data-testid="nextPage" className="col-12 col-md-4 py-3 py-md-0 px-4" color="primary" onClick={() => { dispatch(nextPage()); }}>{btnValue}</Button>
     </Container>
   );
 }

@@ -4,13 +4,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   Container,
   Row,
-  Col,
 } from 'reactstrap';
 import Engine from './Engine';
 import { setEngine } from '../../redux/chosenConfig';
 
 function Engines() {
-  const { headers, engine } = useSelector((state) => state.engine);
+  const { engine } = useSelector((state) => state.engine);
   const { engineID } = useSelector((state) => state.chosenConfig);
   const dispatch = useDispatch();
   return (

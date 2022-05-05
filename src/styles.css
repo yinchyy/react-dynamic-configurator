@@ -9,4 +9,13 @@ header {
   font-family: "Poppins", sans-serif;
 }
 
+.radio-elem {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/public/engine-elem.jpg);
+  background-size: cover;
+}
+
+.radio-checked {
+  outline: 5px solid #A80000;
+}
+
 /*# sourceMappingURL=styles.css.map */

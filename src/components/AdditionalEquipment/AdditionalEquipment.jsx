@@ -4,13 +4,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   Container,
   Row,
-  Col,
 } from 'reactstrap';
 import { setCheckboxStates } from '../../redux/checkboxStates';
 import EqElement from './EqElement';
 
 function AdditionalEquipment() {
-  const { headers, additionalEquipment } = useSelector((state) => state.additionalEquipment);
+  const { additionalEquipment } = useSelector((state) => state.additionalEquipment);
   const { checkboxStates } = useSelector((state) => state.checkboxStates);
   const dispatch = useDispatch();
 
@@ -26,25 +25,25 @@ function AdditionalEquipment() {
     });
     dispatch(setCheckboxStates(updatedCheckboxStates));
   };
-
   return (
-    <Container>
-      <header className="text-center"><h1>Additional equipment selection</h1></header>
-      <Row className="row-cols-3 d-flex flex-row">
-        <Col />
-        {headers.map((value) => <Col>{value}</Col>)}
-      </Row>
-      {additionalEquipment.map((value) => (
-        <EqElement
-          id={value.id}
-          name={value.name}
-          price={value.price}
-          isChecked={checkboxStates[value.id]}
-          change={() => { handleCheckboxStateChange(value.id); }}
-        />
-      ))}
-    </Container>
+    <div>
+      <header className="d-flex justify-content-center align-items-center">
+        <h1>Additional equipment selection</h1>
+      </header>
+      <Container>
+        <Row className="d-flex justify-content-center">
+          {additionalEquipment.map((value) => (
+            <EqElement
+              id={value.id}
+              name={value.name}
+              price={value.price}
+              isChecked={checkboxStates[value.id]}
+              change={() => { handleCheckboxStateChange(value.id); }}
+            />
+          ))}
+        </Row>
+      </Container>
+    </div>
   );
 }
-
 export default AdditionalEquipment;

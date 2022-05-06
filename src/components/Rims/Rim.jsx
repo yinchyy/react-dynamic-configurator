@@ -1,7 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
-  Row,
   Col,
 } from 'reactstrap';
 import PropTypes from 'prop-types';
@@ -13,15 +12,20 @@ function Rim({
   isChecked,
   change,
 }) {
+  let checked = '';
+  if (isChecked) {
+    checked = 'radio-checked';
+  }
   return (
-    <Row className="row-cols-4 d-flex flex-row">
-      <Col className="d-flex justify-content-end">
-        <input type="radio" name="element" checked={isChecked} onChange={change} />
-      </Col>
+    <Col className={`col-8 col-md-4 d-flex flex-column link-light radio-elem m-4 p-3 ${checked}`} onClick={change}>
+      <Col className="text-center fw-bold fs-5">{name}</Col>
       <Col>{size}</Col>
-      <Col>{name}</Col>
-      <Col>{price}</Col>
-    </Row>
+      <Col className="link-danger">
+        {price}
+        {' '}
+        PLN
+      </Col>
+    </Col>
   );
 }
 Rim.propTypes = {

@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/react-dynamic-configurator/static/css/main.553a9499.css",
-    "main.js": "/react-dynamic-configurator/static/js/main.ffd3cccb.js",
+    "main.js": "/react-dynamic-configurator/static/js/main.e0cb6b52.js",
     "static/js/787.4351ff4a.chunk.js": "/react-dynamic-configurator/static/js/787.4351ff4a.chunk.js",
     "static/media/engine-elem.jpg": "/react-dynamic-configurator/static/media/engine-elem.29147fdd6d388fd764f1.jpg",
     "static/media/engine.jpg": "/react-dynamic-configurator/static/media/engine.3baf7d1d88adb1c1fc09.jpg",
     "index.html": "/react-dynamic-configurator/index.html",
     "main.553a9499.css.map": "/react-dynamic-configurator/static/css/main.553a9499.css.map",
-    "main.ffd3cccb.js.map": "/react-dynamic-configurator/static/js/main.ffd3cccb.js.map",
+    "main.e0cb6b52.js.map": "/react-dynamic-configurator/static/js/main.e0cb6b52.js.map",
     "787.4351ff4a.chunk.js.map": "/react-dynamic-configurator/static/js/787.4351ff4a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.553a9499.css",
-    "static/js/main.ffd3cccb.js"
+    "static/js/main.e0cb6b52.js"
   ]
 }

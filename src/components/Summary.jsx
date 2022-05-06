@@ -52,83 +52,90 @@ function Summary() {
   }
 
   return (
-    <Container>
-      <header className="text-center"><h1>Summary</h1></header>
-      <Row className="row-cols-2 d-flex flex-row justify-content-center">
-        <Col>Base cost</Col>
-        <Col>{baseCost}</Col>
-      </Row>
-      <Row className="row-cols-2 d-flex flex-row justify-content-center">
-        <Col>
-          Engine:
-          {' '}
-          {config[0].model}
-        </Col>
-        <Col>{config[0].price}</Col>
-      </Row>
-      <Row className="row-cols-2 d-flex flex-row justify-content-center">
-        <Col>
-          Body paint:
-          {' '}
-          {config[1].name}
-        </Col>
-        <Col>{config[1].price}</Col>
-      </Row>
-      <Row className="row-cols-2 d-flex flex-row justify-content-center">
-        <Col>
-          Rims paint:
-          {' '}
-          {config[2].name}
-        </Col>
-        <Col>{config[2].price}</Col>
-      </Row>
-      <Row className="row-cols-2 d-flex flex-row justify-content-center">
-        <Col>
-          Rims:
-          {' '}
-          {config[3].name}
-          {' '}
-          {config[3].size}
-          &quot;
-        </Col>
-        <Col>{config[3].price}</Col>
-      </Row>
-      <Row className="row-cols-2 d-flex flex-row justify-content-center">
-        <Col>
-          Seats option:
-          {' '}
-          {config[4].name}
-        </Col>
-        <Col>{config[4].price}</Col>
-      </Row>
-      <Row className="row-cols-2 d-flex flex-row justify-content-center">
-        <Col>
-          Interior color:
-          {' '}
-          {config[5].name}
-        </Col>
-        <Col>{config[5].price}</Col>
-      </Row>
-      <Row className="row-cols-2 d-flex flex-row justify-content-center">
-        <Col>
-          Additional equipment:
-        </Col>
-        <Col />
-      </Row>
-      {config[6].map((value) => (
+    <div>
+      <header className="d-flex justify-content-center align-items-center">
+        <h1>Summary</h1>
+      </header>
+      <Container>
         <Row className="row-cols-2 d-flex flex-row justify-content-center">
-          <Col className="text-center">{value.name}</Col>
-          <Col>{value.price}</Col>
+          <Col>Base cost</Col>
+          <Col>{baseCost}</Col>
         </Row>
-      ))}
+        <Row className="row-cols-2 d-flex flex-row justify-content-center">
+          <Col>
+            Engine:
+            {' '}
+            {config[0].model}
+          </Col>
+          <Col>{config[0].price}</Col>
+        </Row>
+        <Row className="row-cols-2 d-flex flex-row justify-content-center">
+          <Col>
+            Body paint:
+            {' '}
+            {config[1].name}
+          </Col>
+          <Col>{config[1].price}</Col>
+        </Row>
+        <Row className="row-cols-2 d-flex flex-row justify-content-center">
+          <Col>
+            Rims paint:
+            {' '}
+            {config[2].name}
+          </Col>
+          <Col>{config[2].price}</Col>
+        </Row>
+        <Row className="row-cols-2 d-flex flex-row justify-content-center">
+          <Col>
+            Rims:
+            {' '}
+            {config[3].name}
+            {' '}
+            {config[3].size}
+            &quot;
+          </Col>
+          <Col>{config[3].price}</Col>
+        </Row>
+        <Row className="row-cols-2 d-flex flex-row justify-content-center">
+          <Col>
+            Seats option:
+            {' '}
+            {config[4].name}
+          </Col>
+          <Col>{config[4].price}</Col>
+        </Row>
+        <Row className="row-cols-2 d-flex flex-row justify-content-center">
+          <Col>
+            Interior color:
+            {' '}
+            {config[5].name}
+          </Col>
+          <Col>{config[5].price}</Col>
+        </Row>
+        <Row className="row-cols-2 d-flex flex-row justify-content-center">
+          <Col>
+            Additional equipment:
+          </Col>
+          <Col />
+        </Row>
+        {config[6].map((value) => (
+          <Row className="row-cols-2 d-flex flex-row justify-content-center">
+            <Col className="text-center">{value.name}</Col>
+            <Col>{value.price}</Col>
+          </Row>
+        ))}
 
-      <Row className="row-cols-2 d-flex flex-row justify-content-center">
-        <Col className="text-end">
-          Total:
-        </Col>
-        <Col>{sum}</Col>
-      </Row>
-    </Container>
+        <Row className="row-cols-2 d-flex flex-row justify-content-center">
+          <Col className="text-end">
+            Total:
+          </Col>
+          <Col>
+            {sum}
+            &nbsp;PLN
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 }
 

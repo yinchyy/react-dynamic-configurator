@@ -17,7 +17,7 @@ function Navigation() {
   if (activePage === lastPage) {
     return (
       <Container className="d-flex justify-content-evenly">
-        <Button data-testid="returnToFirstPage" className="col-4 px-4" color="primary" onClick={() => { dispatch(returnToFirstPage()); }}>Configure again</Button>
+        <Button data-testid="returnToFirstPage" className="col-12 col-md-4 py-3 py-md-2 px-4" color="primary" onClick={() => { dispatch(returnToFirstPage()); }}>Configure again</Button>
       </Container>
     );
   }

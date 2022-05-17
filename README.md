@@ -22,28 +22,28 @@ npm test
 ```
 # Screenshots
 <p align="center">
- <img src="https://i.postimg.cc/fRNHpZFh/Screenshot-20220501-235428.png" alt="Engine selection"/>
+ <img src="https://i.postimg.cc/MZ1mTGRs/Screenshot-20220517-214056.png" alt="Engine selection"/>
 </p>
 <p align="center">
- <img src="https://i.postimg.cc/SxRGwsr3/Screenshot-20220501-235605.png" alt="Body Paint selection"/>
+ <img src="https://i.postimg.cc/SRVXMHmK/Screenshot-20220517-214228.png" alt="Body Paint selection"/>
 </p>
 <p align="center">
- <img src="https://i.postimg.cc/WzsGSbz9/Screenshot-20220502-000536.png" alt="Rims Paint selection"/>
+ <img src="https://i.postimg.cc/vZC4frw5/Screenshot-20220517-214318.png" alt="Rims Paint selection"/>
 </p>
 <p align="center">
- <img src="https://i.postimg.cc/5NN5C0Zy/Screenshot-20220502-000614.png" alt="Rims selection"/>
+ <img src="https://i.postimg.cc/m2zRM0L6/Screenshot-20220517-214442.png" alt="Rims selection"/>
 </p>
 <p align="center">
- <img src="https://i.postimg.cc/bJhkNNxz/Screenshot-20220502-000700.png" alt="Seat type selection"/>
+ <img src="https://i.postimg.cc/44hsHDN2/Screenshot-20220517-214534.png" alt="Seat type selection"/>
 </p>
 <p align="center">
- <img src="https://i.postimg.cc/SQVCk4Jh/Screenshot-20220502-000730.png" alt="Interior color selection"/>
+ <img src="https://i.postimg.cc/sx5kHRMV/Screenshot-20220517-214609.png" alt="Interior color selection"/>
 </p>
 <p align="center">
- <img src="https://i.postimg.cc/mk6PMbH1/Screenshot-20220502-000814.png" alt="Additional equipment selection"/>
+ <img src="https://i.postimg.cc/wMYPmb0n/Screenshot-20220517-214653.png" alt="Additional equipment selection"/>
 </p>
 <p align="center">
- <img src="https://i.postimg.cc/43Tmp2mP/Screenshot-20220502-000909.png" alt="Summary page"/>
+ <img src="https://i.postimg.cc/yYVpCR5h/Screenshot-20220517-214740.png" alt="Summary page"/>
 </p>
 
 
